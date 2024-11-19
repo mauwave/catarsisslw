@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catarsis</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catarsis</h1>
+    <p>Un espacio para liberar, conectar y sanar.</p>
+    <p>En un mundo que a veces puede parecer demasiado hostil, especialmente para quienes formamos parte de la comunidad LGBTIQ+, aquí te ofrecemos un lugar donde puedas sentirte escuchadx.</p>
+    <button onclick="nextSection(1)">Siguiente</button>
+
+    <div id="section-1" style="display:none;">
+        <p>A veces la respuesta no está en una solución única, pero sí en una guía para poder sentirnos mejor.</p>
+        <p>Hace cinco años no podía más y no confiaba en nada para sostenerme. Una comunidad queer, rara, diferente me hizo saber que no estaba solx.</p>
+        <button onclick="nextSection(2)">Siguiente</button>
+    </div>
+
+    <div id="section-2" style="display:none;">
+        <p>Puede que hoy quieras tomar una decisión diferente. Espero que este mensaje sea de ayuda.</p>
+        <button onclick="nextSection(3)">Siguiente</button>
+    </div>
+
+    <div id="section-3" style="display:none;">
+        <p>Tal vez todo puede empezar contando algo, soltando un mensaje al aire.</p>
+        <textarea placeholder="Escribe algo, si quieres..."></textarea>
+        <br>
+        <button onclick="alert('Gracias por compartir. No dejes de contar cómo te sientes.')">Enviar</button>
+        <div style="margin-top: 40px;">
+            <h2>Contactos de apoyo psicológico</h2>
+            <p><a href="https://www.instagram.com/lxs.otrxs.morrxs?igsh=MTJlbGdncXEwYzRpeA==" target="_blank">Lxs otrxs morrxs</a></p>
+            <p><a href="https://www.instagram.com/red.arcoiris.resistencia?igsh=bGFncW40aHZveHd4" target="_blank">Red Arcoíris en Resistencia</a></p>
+            <p><a href="https://www.facebook.com/SaludMentalCoahuilaSSA" target="_blank">Salud Mental, Coahuila</a></p>
+            <p><a href="https://www.reddit.com/r/catarsiskuirslw/s/1q0aGS63KT" target="_blank">Únete al foro en Reddit</a></p>
+        </div>
+    </div>
+
+    <script>
+        function nextSection(sectionNumber) {
+            document.getElementById(`section-${sectionNumber}`).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
